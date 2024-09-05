@@ -1,10 +1,16 @@
-// import "../../node_modules/bootstrap/dist/css/bootstrap.css";
-
 let currTheme = 0;
-let totalThemes = 4;
+const totalThemes = 4;
+
+if (!localStorage.getItem("theme")) localStorage.setItem("theme", "theme-0");
+currTheme = Number(localStorage.getItem("theme").slice(-1));
+updateTheme(currTheme);
 
 function changeTheme() {
-  document.body.classList.remove(`theme-${currTheme}`);
-  currTheme = (currTheme + 1) % totalThemes; // mod by total themes (idk how many i want)
-  if (currTheme > 0) document.body.classList.add(`theme-${currTheme}`);
+  currTheme = (currTheme + 1) % totalThemes;
+  updateTheme(currTheme);
+  localStorage.setItem("theme", `theme-${currTheme}`);
+}
+
+function updateTheme(i) {
+  document.documentElement.setAttribute("data-theme", `theme-${i}`);
 }
