@@ -126,5 +126,6 @@ footer {
   p {
     font-size: clamp(1rem, calc(3vw + 1.3rem), 100rem);
     text-wrap: balance;
+    line-height: 1.4;
   }
 }

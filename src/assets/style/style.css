@@ -123,4 +123,5 @@ footer nav {
 .hero p {
   font-size: clamp(1rem, 3vw + 1.3rem, 100rem);
   text-wrap: balance;
+  line-height: 1.4;
 }/*# sourceMappingURL=style.css.map */
