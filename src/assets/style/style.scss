@@ -6,6 +6,7 @@
   --font-mono: "Inconsolata", monospace;
 
   font-size: clamp(1rem, 3vw, 1.5rem);
+  // line-height: 1;
   scrollbar-color: var(--color-body) var(--color-bg);
 }
 
@@ -87,7 +88,7 @@ code {
   font-size: 1rem;
 }
 
-// header
+// header and footer
 
 header {
   font-family: var(--font-mono);
@@ -96,8 +97,6 @@ header {
     gap: 1rem;
   }
 }
-
-// footer
 
 footer {
   font-family: var(--font-mono);
@@ -114,4 +113,18 @@ footer {
   background: none;
   border: none;
   color: var(--color-body);
+}
+
+// hero
+
+.hero {
+  margin-block: 10rem 6rem;
+  h1 {
+    font-size: clamp(2rem, calc(3vw + 4.2rem), 100rem);
+    line-height: 1.1;
+  }
+  p {
+    font-size: clamp(1rem, calc(3vw + 1.3rem), 100rem);
+    text-wrap: balance;
+  }
 }

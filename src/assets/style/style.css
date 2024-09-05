@@ -111,4 +111,16 @@ footer nav {
   background: none;
   border: none;
   color: var(--color-body);
+}
+
+.hero {
+  margin-block: 10rem 6rem;
+}
+.hero h1 {
+  font-size: clamp(2rem, 3vw + 4.2rem, 100rem);
+  line-height: 1.1;
+}
+.hero p {
+  font-size: clamp(1rem, 3vw + 1.3rem, 100rem);
+  text-wrap: balance;
 }/*# sourceMappingURL=style.css.map */
