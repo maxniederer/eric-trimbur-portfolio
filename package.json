@@ -1,0 +1,19 @@
+{
+  "name": "erictrimburportfolio",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch:sass": "npx sass src/assets/style:_site/assets/style --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@11ty/eleventy": "github:11ty/eleventy"
+  },
+  "dependencies": {
+    "sass": "^1.77.8"
+  }
+}

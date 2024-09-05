@@ -1,0 +1,111 @@
+@import url("https://fonts.googleapis.com/css2?family=Baskervville:ital@0;1&family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+  --font-body: "Inter Tight", sans-serif;
+  --font-heading: "Baskervville", serif;
+
+  --color-body: #170345;
+  --color-bg: #c5c3ae;
+  --color-accent: red;
+
+  font-size: clamp(1rem, 3vw, 1.5rem);
+  // scrollbar-color: var(--color-body) var(--color-bg);
+}
+
+::selection {
+  background-color: var(--color-body);
+  color: var(--color-bg);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.theme-1 {
+  --color-body: #d6fedc;
+  --color-bg: #137a70;
+  --color-accent: red;
+}
+
+.theme-2 {
+  --color-body: #6f54c5;
+  --color-bg: #c1ee24;
+  --color-accent: red;
+}
+
+.theme-3 {
+  --color-body: #ddf7e5;
+  --color-bg: #895514;
+  --color-accent: red;
+}
+
+body {
+  font-family: var(--font-body);
+  font-weight: 300;
+  background: var(--color-bg);
+  color: var(--color-body);
+
+  display: flex;
+  flex-direction: column;
+  min-height: 100svh;
+
+  padding: clamp(0.35rem, 3vw, 1rem);
+}
+
+main {
+  flex-grow: 1;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
+  // font-weight: 300;
+}
+
+a {
+  color: var(--color-body);
+  text-decoration: none;
+}
+
+b {
+  font-weight: 500;
+}
+
+img {
+  max-width: 40rem;
+}
+
+// header
+
+header {
+  // background: DarkSlateGray;
+  nav {
+    display: flex;
+    gap: 1rem;
+    & > * {
+      // padding: 1rem;
+    }
+  }
+}
+
+// footer
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  nav {
+    display: flex;
+    gap: 1.5rem;
+  }
+}
+
+.icon-button,
+.icon-link {
+  background: none;
+  border: none;
+  color: var(--color-body);
+}
