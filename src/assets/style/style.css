@@ -1,7 +1,8 @@
-@import url("https://fonts.googleapis.com/css2?family=Baskervville:ital@0;1&family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Baskervville:ital@0;1&family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap?family=Inconsolata:wght@200..900&display=swap");
 :root {
   --font-body: "Inter Tight", sans-serif;
   --font-heading: "Baskervville", serif;
+  --font-mono: "Inconsolata", monospace;
   font-size: clamp(1rem, 3vw, 1.5rem);
   scrollbar-color: var(--color-body) var(--color-bg);
 }
@@ -81,11 +82,22 @@ img {
   max-width: 40rem;
 }
 
+code {
+  color: var(--color-body);
+  font-family: var(--font-mono);
+  font-size: 1rem;
+}
+
+header {
+  font-family: var(--font-mono);
+}
 header nav {
   display: flex;
   gap: 1rem;
 }
+
 footer {
+  font-family: var(--font-mono);
   display: flex;
   justify-content: space-between;
 }
