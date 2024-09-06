@@ -1,0 +1,22 @@
+---
+title: Projects
+layout: 'layouts/base.njk'
+---
+
+<h1>Projects</h1>
+
+<ul>
+  {%- for project in collections.project -%}
+  <li>
+    <a href="{{project.url}}">
+      <div>
+        <h2>{{project.data.title}}</h2>
+        <p>{{project.data.desc}}<p>
+      </div>
+      <div>
+        <img src="{{project.data.image}}" alt="{{project.data.imageAlt}}" />
+      </div>
+    </a>
+  </li>
+  {%- endfor -%}
+</ul>
