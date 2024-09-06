@@ -3,20 +3,20 @@ title: Projects
 layout: 'layouts/base.njk'
 ---
 
-<h1>Projects</h1>
-
-<ul>
+<ul class="project-list">
   {%- for project in collections.project -%}
-  <li>
-    <a href="{{project.url}}">
-      <div>
-        <h2>{{project.data.title}}</h2>
-        <p>{{project.data.desc}}<p>
-      </div>
-      <div>
+  <li class="project-entry row gx-0">
+    <div class="project-img col-6">
+      <a href="{{project.url}}">
         <img src="{{project.data.image}}" alt="{{project.data.imageAlt}}" />
-      </div>
-    </a>
+      </a>
+    </div>
+    <div class="project-desc col-6">
+      <a href="{{project.url}}">
+        <h2>{{project.data.title}}</h2>
+      </a>
+      <p>{{project.data.desc}}<p>
+    </div>
   </li>
   {%- endfor -%}
 </ul>
