@@ -5,8 +5,6 @@ image: /assets/img/rubiks1.jpg
 imageAlt: A Rubik's Cube suspended in the finished Rubiks Cube Solver machine
 ---
 
-# {{ title }}
-
 ## Overview
 
 I collaborated with three engineers to design and build a robot able to autonomously solve a Rubik’s Cube. This project represents a semester’s worth of work in my senior design class. My personal responsibilities included:
