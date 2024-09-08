@@ -1,21 +1,16 @@
----
-title: Projects
-layout: 'layouts/base.njk'
----
-
 <ul class="project-list">
   {%- for project in collections.project | sortByOrder -%}
-  <li class="project-entry row gx-0">
-    <div class="project-img col-6">
+  <li class="project-entry">
+    <div class="project-img">
       <a href="{{project.url}}">
         <img src="{{project.data.image}}" alt="{{project.data.imageAlt}}" />
       </a>
     </div>
-    <div class="project-desc col-6">
+    <div class="project-desc">
       <a href="{{project.url}}">
         <h2>{{project.data.title}}</h2>
       </a>
-      <p>{{project.data.desc}}<p>
+      <p>{{project.data.desc}}</p>
     </div>
   </li>
   {%- endfor -%}
