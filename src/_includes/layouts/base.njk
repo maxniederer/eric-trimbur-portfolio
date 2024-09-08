@@ -10,7 +10,12 @@
 
     <link rel="stylesheet" href="/assets/style/style.css" />
 
-    <title>{{ title }}</title>
+    <title>
+      Eric Trimbur
+      {% if title %}
+       | {{ title }}
+      {% endif %}
+    </title>
     
   </head>
   <body>
