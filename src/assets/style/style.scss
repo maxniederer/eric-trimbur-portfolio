@@ -137,7 +137,7 @@ footer {
   margin-block: 200px 150px;
   h1 {
     font-size: clamp(2rem, calc(3vw + 4rem), 6.5rem);
-    line-height: 1.1;
+    line-height: 1;
   }
   p {
     font-size: clamp(1rem, calc(3vw + 1rem), 3.5rem);
@@ -171,15 +171,34 @@ footer {
       }
     }
   }
+
+  // offset descriptions for mobile view
+  // not sure if i like this
+  /*@media (max-width: 600px) {
+    grid-template-columns: 32px auto;
+    grid-template-rows: 1fr 32px auto;
+    .project-img {
+      grid-column: 1 / span 2;
+      grid-row: 1 / span 2;
+    }
+    .project-desc {
+      grid-column: 2 / span 1;
+      grid-row: 2 / span 2;
+    }
+  }*/
 }
 
 $aspect-square: 1;
-$aspect-slim: 2/1;
+$aspect-comfy: 4/3;
+$aspect-slim: 4/3;
 
 .project-img {
   aspect-ratio: $aspect-slim;
   @media (min-width: 600px) {
     aspect-ratio: $aspect-square;
+  }
+  @media (min-width: 1000px) {
+    aspect-ratio: $aspect-comfy;
   }
   overflow: none;
   img {
@@ -191,11 +210,17 @@ $aspect-slim: 2/1;
 
 .project-desc {
   h2 {
-    font-size: clamp(2rem, calc(3vw + 1.3rem), 3.75rem);
+    font-size: clamp(2rem, calc(3vw + 2.1rem), 3.75rem);
+    @media (min-width: 600px) {
+      font-size: clamp(2rem, calc(3vw + 1.3rem), 3.75rem);
+    }
     line-height: 1;
   }
   p {
-    font-size: clamp(1rem, calc(3vw - 0.5rem), 1.5rem);
+    font-size: clamp(1rem, calc(3vw + 0.5rem), 1.5rem);
+    @media (min-width: 600px) {
+      font-size: clamp(1rem, calc(3vw - 0.5rem), 1.5rem);
+    }
     line-height: 1.4;
     margin-bottom: 0;
 
@@ -204,16 +229,38 @@ $aspect-slim: 2/1;
 
   display: flex;
   flex-direction: column;
-  justify-content: center;
   gap: 10px;
 
   padding-inline: 1rem;
 
   aspect-ratio: $aspect-slim;
   padding-block: 1rem;
+  // margin-bottom: 3rem;
+
+  background: var(--color-bg);
 
   @media (min-width: 600px) {
+    justify-content: center;
     aspect-ratio: $aspect-square;
     padding-block: 0;
+    margin-bottom: 0;
+  }
+  @media (min-width: 1000px) {
+    aspect-ratio: $aspect-comfy;
+  }
+}
+
+///
+
+$padding: clamp(16px, 3vw, 40px);
+
+.inline-padding {
+  padding-inline: $padding;
+}
+
+.inline-padding-mobile {
+  padding-inline: $padding;
+  @media (min-width: 600px) {
+    padding-inline: 0;
   }
 }
