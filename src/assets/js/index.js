@@ -3,6 +3,7 @@ const totalThemes = 4;
 
 if (!localStorage.getItem("theme")) localStorage.setItem("theme", "theme-0");
 currTheme = Number(localStorage.getItem("theme").slice(-1));
+if (isNaN(currTheme)) currTheme = 0;
 updateTheme(currTheme);
 
 function changeTheme() {
