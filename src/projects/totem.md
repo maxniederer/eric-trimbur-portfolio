@@ -1,5 +1,6 @@
 ---
 title: Totem Twist
+order: 6
 desc: A take on the classic Bop-It toy, Totem Twist has the user quickly perform one of three randomized tasks at an ever increasing pace.
 image: /assets/img/totem1.jpg
 imageAlt: A cylindrical machine with a countdown interface

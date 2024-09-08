@@ -4,7 +4,7 @@ layout: 'layouts/base.njk'
 ---
 
 <ul class="project-list">
-  {%- for project in collections.project -%}
+  {%- for project in collections.project | sortByOrder -%}
   <li class="project-entry row gx-0">
     <div class="project-img col-6">
       <a href="{{project.url}}">
