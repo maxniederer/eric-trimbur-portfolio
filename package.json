@@ -11,7 +11,8 @@
   "license": "ISC",
   "description": "",
   "devDependencies": {
-    "@11ty/eleventy": "github:11ty/eleventy"
+    "@11ty/eleventy": "github:11ty/eleventy",
+    "netlify-cli": "^17.35.0"
   },
   "dependencies": {
     "eleventy-plugin-embed-everything": "^1.19.0",
