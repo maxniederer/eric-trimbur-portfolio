@@ -31,6 +31,7 @@ module.exports = function (eleventyConfig) {
 
   // Copy `img/` to `_site/img`
   eleventyConfig.addPassthroughCopy("src/assets");
+  eleventyConfig.addPassthroughCopy("src/admin");
 
   // custom sorting filter
   function sortByOrder(values) {
