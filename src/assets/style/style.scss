@@ -93,7 +93,7 @@ h6 {
 
 a {
   color: var(--color-body);
-  text-decoration: none;
+  // text-decoration: none;
 }
 
 b {
@@ -162,6 +162,7 @@ box-icon {
   background: none;
   border: none;
   color: var(--color-body);
+  text-decoration: none;
 }
 
 // hero
@@ -264,6 +265,9 @@ $aspect-slim: 4/3;
     line-height: 1.4;
     margin-bottom: 0;
   }
+  a {
+    text-decoration: none;
+  }
 
   display: flex;
   flex-direction: column;
@@ -316,12 +320,37 @@ $padding: clamp(16px, 3vw, 30px);
   }
 
   h2 {
-    margin-block: 2.2rem 0.5rem;
-    // @include box-shadow-inset(-0.05em);
+    scroll-margin: 20px;
+    display: inline;
+    margin-right: 0.1em;
   }
 
   img {
     width: 100%;
     height: auto;
   }
+}
+
+.toc {
+  border: 1px solid var(--color-body);
+  ol {
+    margin-block: 0.75rem;
+  }
+}
+
+.heading-wrapper {
+  margin-block: 2.2rem 0.5rem;
+
+  &:hover {
+    .header-anchor {
+      opacity: 1;
+    }
+  }
+}
+
+.header-anchor {
+  // font-size: calc(1.325rem + 0.9vw);
+  opacity: 0;
+  transition-property: opacity;
+  transition: 150ms ease-in-out;
 }
