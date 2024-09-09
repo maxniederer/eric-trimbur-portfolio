@@ -15,7 +15,7 @@ I collaborated with three engineers to design and build a robot able to autonomo
 - manufacturing
 - motor control
 
-Download the full report here.
+[Download the full report here.](https://www.erictrimbur.com/s/Final-Design-Document.pdf)
 
 https://www.youtube.com/watch?v=A4SFoooSrAI
 
@@ -39,7 +39,7 @@ I milled the boards on our makerspace's mill. We filled vias, soldered on compon
 
 ## Optimized Movement
 
-I was especially dedicated to writing firmware to optimize the motor movement. I designed a speed profile to achieve precise movement using stepper motors. The initial speed is limited by how fast the motor can start without skipping steps. A faster speed is possible through gentle acceleration. Stopping too fast can also result in skipped steps. As a countermeasure, I added a deceleration curve to reduce the axis' momentum. Finally, I developed a testing procedure to tune the parameters of the equation I developed. I implemented the movement curve in custom-embedded C firmware. Our final result was a 19% increase in motor movement compared to constant speed movement.
+I was especially dedicated to writing firmware to optimize the motor movement. I designed a speed profile to achieve precise movement using stepper motors. The initial speed is limited by how fast the motor can start without skipping steps. A faster speed is possible through gentle acceleration. Stopping too fast can also result in skipped steps. As a countermeasure, I added a deceleration curve to reduce the axis' momentum. Finally, I developed a testing procedure to tune the parameters of the equation I developed. I implemented the movement curve in custom-embedded C firmware. Our final result was a **19% increase in motor movement** compared to constant speed movement.
 
 ![ALT TEXT](/assets/img/rubiks4.png)
 

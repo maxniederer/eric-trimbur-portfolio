@@ -10,7 +10,7 @@ imageAlt: A 3D mockup of the planetary lander
 
 I was the payload team lead during the 2020-2021 NASA USLI competition year. I oversaw roughly 10 engineering students in this project. Due to restrictions during the pandemic, the payload was never fully manufactured or launched, but the team presented the full design to NASA in the design division of the competition.
 
-The full FRR report from our team can be found here. See section 4 for relevant content.
+[The full FRR report from our team can be found here.](https://www.erictrimbur.com/s/USLI-2020-2021-FRR-University-of-Pittsburgh.pdf) See section 4 for relevant content.
 
 ## Systems Engineering
 

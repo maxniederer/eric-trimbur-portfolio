@@ -10,7 +10,7 @@ imageAlt: The finished Trimbuphone, a white machine with a wire-attached pen
 
 I developed the Trimbuphone for my junior design class. The individual assignment was simply to make circuit using a 555 timer and then design and assemble it on a PCB. I personally also took on the challenge to develop a professional enclosure.
 
-Download the full report here.
+[Download the full report here.](https://www.erictrimbur.com/s/555_Report.pdf)
 
 ## A Complete Synthesizer
 

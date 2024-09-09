@@ -8,7 +8,7 @@ imageAlt: A homemade violin made of cherry wood and spruce.
 
 ## Overview
 
-The violin was a personal project I took on starting in the summer of 2019. I worked on the project for a year, but did not make progress during the school semesters. I did not have any personalized instruction or prior knowledge and learned only from online resources. I recorded and edited together a video series on the whole project which can be found on my YouTube page.
+The violin was a personal project I took on starting in the summer of 2019. I worked on the project for a year, but did not make progress during the school semesters. I did not have any personalized instruction or prior knowledge and learned only from online resources. I recorded and edited together a video series on the whole project which can be found on my [YouTube page](https://www.youtube.com/c/EricTrimbur).
 
 ## Built from Scratch
 

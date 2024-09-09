@@ -10,7 +10,7 @@ imageAlt: A cylindrical machine with a countdown interface
 
 The Totem Twist was the final project in my junior design class. The task was to create a toy similar to the classic Bop-It toy. I worked on a team of three on this project, contributing primarily to overall system design, firmware, and mechanical design.
 
-Download the full report here.
+[Download the full report here.](https://www.erictrimbur.com/s/totemTwistReport-compressed.pdf)
 
 ## System Design
 
