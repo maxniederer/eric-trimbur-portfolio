@@ -25,8 +25,8 @@ html[data-theme=theme-0] {
 }
 
 html[data-theme=theme-1] {
-  --color-body: hsl(129, 95%, 92%);
-  --color-bg: hsl(174, 73%, 28%);
+  --color-body: #90f1d6;
+  --color-bg: #383576;
   --color-accent: red;
 }
 
@@ -49,8 +49,8 @@ html[data-theme=theme-4] {
 }
 
 html[data-theme=theme-5] {
-  --color-body: #e8f89a;
-  --color-bg: #e81826;
+  --color-body: #98ffef;
+  --color-bg: #c43742;
   --color-accent: red;
 }
 
@@ -288,7 +288,7 @@ box-icon {
 }
 
 .project-writeup {
-  max-width: 40rem;
+  max-width: 38rem;
 }
 .project-writeup h1 {
   font-size: clamp(2rem, 3vw + 2.1rem, 3.75rem);
