@@ -1,6 +1,6 @@
 <ul class="project-list" id="projects">
   {%- for project in collections.project | sortByOrder -%}
-  <li class="project-entry">
+  <li class="project-entry hidden">
     <div class="project-img">
       <a href="{{project.url}}">
         <img src="{{project.data.image}}" alt="{{project.data.imageAlt}}" />

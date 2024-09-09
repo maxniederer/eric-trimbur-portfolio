@@ -362,3 +362,17 @@ $padding: clamp(16px, 3vw, 30px);
 .eleventy-plugin-youtube-embed {
   margin-bottom: 1rem;
 }
+
+////
+
+.hidden {
+  opacity: 0;
+  @media (prefers-reduced-motion: no-preference) {
+    transition-property: opacity;
+    transition: 500ms;
+  }
+}
+
+.show {
+  opacity: 1;
+}

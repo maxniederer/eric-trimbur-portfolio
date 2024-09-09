@@ -330,4 +330,18 @@ box-icon {
 
 .eleventy-plugin-youtube-embed {
   margin-bottom: 1rem;
+}
+
+.hidden {
+  opacity: 0;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .hidden {
+    transition-property: opacity;
+    transition: 500ms;
+  }
+}
+
+.show {
+  opacity: 1;
 }/*# sourceMappingURL=style.css.map */

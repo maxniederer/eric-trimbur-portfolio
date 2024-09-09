@@ -15,3 +15,17 @@ function changeTheme() {
 function updateTheme(i) {
   document.documentElement.setAttribute("data-theme", `theme-${i}`);
 }
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    console.log(entry);
+    if (entry.isIntersecting) {
+      entry.target.classList.add("show");
+    } else {
+      entry.target.classList.remove("show");
+    }
+  });
+});
+
+const hiddenElements = document.querySelectorAll(".hidden");
+hiddenElements.forEach((obj) => observer.observe(obj));
