@@ -190,7 +190,7 @@ box-icon {
   }
 }
 
-//projects
+// projects
 
 .project-list {
   list-style-type: none;
@@ -297,7 +297,7 @@ $aspect-slim: 4/3;
   }
 }
 
-///
+// helper class
 
 $padding: clamp(16px, 3vw, 30px);
 
@@ -312,7 +312,54 @@ $padding: clamp(16px, 3vw, 30px);
   }
 }
 
-///////
+/// contact
+
+#contact {
+  min-height: 95svh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#contact h2 {
+  font-size: clamp(3.5rem, calc(3vw + 2rem), 6.5rem);
+}
+
+form {
+  display: flex;
+  gap: 0.5rem;
+  flex-direction: column;
+}
+
+label {
+  width: 100%;
+}
+
+input,
+textarea {
+  background: none;
+  border: none;
+  border-bottom: 2px solid var(--color-body);
+  color: inherit;
+  width: 100%;
+}
+
+textarea {
+  min-height: 4rem;
+}
+
+.btn {
+  color: var(--color-bg);
+  background: var(--color-body);
+  border-radius: 4px;
+  // background: none;
+  // border: none;
+  // margin: 0;
+  // padding: 0;
+  // text-decoration: underline;
+}
+
+// project pages
 
 .project-writeup {
   max-width: 38rem;
@@ -353,7 +400,6 @@ $padding: clamp(16px, 3vw, 30px);
 }
 
 .header-anchor {
-  // font-size: calc(1.325rem + 0.9vw);
   opacity: 0;
   transition-property: opacity;
   transition: 150ms ease-in-out;
@@ -363,7 +409,7 @@ $padding: clamp(16px, 3vw, 30px);
   margin-bottom: 1rem;
 }
 
-////
+// on-scroll transitions
 
 .hidden {
   opacity: 0;

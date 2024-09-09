@@ -290,6 +290,46 @@ box-icon {
   }
 }
 
+#contact {
+  min-height: 95svh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#contact h2 {
+  font-size: clamp(3.5rem, 3vw + 2rem, 6.5rem);
+}
+
+form {
+  display: flex;
+  gap: 0.5rem;
+  flex-direction: column;
+}
+
+label {
+  width: 100%;
+}
+
+input,
+textarea {
+  background: none;
+  border: none;
+  border-bottom: 2px solid var(--color-body);
+  color: inherit;
+  width: 100%;
+}
+
+textarea {
+  min-height: 4rem;
+}
+
+.btn {
+  color: var(--color-bg);
+  background: var(--color-body);
+  border-radius: 4px;
+}
+
 .project-writeup {
   max-width: 38rem;
 }
