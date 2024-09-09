@@ -1,6 +1,6 @@
 ---
 title: Trimbuphone
-desc: My take on the Stylophone, the classic toy synthesizer. THE TRIMBUPHONE!
+desc: My take on the Stylophone, the classic toy synthesizer.
 image: /assets/img/phone1.jpg
 imageAlt: The finished Trimbuphone, a white machine with a wire-attached pen
 order: 2
