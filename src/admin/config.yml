@@ -1,0 +1,28 @@
+backend:
+  commit_messages:
+    create: Create {{collection}} “{{slug}}”
+    update: Update {{collection}} “{{slug}}”
+    delete: Delete {{collection}} “{{slug}}”
+    uploadMedia: Upload “{{path}}”
+    deleteMedia: Delete “{{path}}”
+    openAuthoring: "{{message}}"
+media_folder: "_site/assets/img"
+public_folder: "/assets/img"
+collections:
+  - name: "project"
+    label: "Project"
+    folder: "src/projects"
+    crate: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description (under ~25 words)", name: "desc", widget: "text" }
+      - { label: "Image", name: "image", widget: "image" }
+      - { label: "Image Alt Text", name: "imageAlt", widget: "text" }
+      - {
+          label: "Order (lower number = higher on project list)",
+          name: "order",
+          widget: "number",
+        }
+      - { label: "Tags", name: "tags", widget: "hidden", default: ["project"] }
+      - { label: "Body", name: "body", widget: "markdown" }
