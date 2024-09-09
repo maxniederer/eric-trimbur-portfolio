@@ -171,6 +171,9 @@ box-icon {
   line-height: 1.4;
   text-wrap: balance;
 }
+.hero p i {
+  margin-left: 0.1em;
+}
 
 .project-list {
   list-style-type: none;
