@@ -17,6 +17,8 @@ I collaborated with three engineers to design and build a robot able to autonomo
 
 Download the full report here.
 
+https://www.youtube.com/watch?v=A4SFoooSrAI
+
 ## System Design
 
 I led system design efforts on the team. We simplified the robot's mechanical design by giving each axis of movement on the cube its own motor. Then we positioned cameras at each corner of the cube to retrieve full color information. I separated the computation of the motor movement from the computer vision and solving algorithm. I implemented this by dedicating a microcontroller just to motor control. My decision granted true parallelism and afforded us maximal flexibility during development.

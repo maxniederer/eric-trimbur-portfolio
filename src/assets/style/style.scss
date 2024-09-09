@@ -358,3 +358,7 @@ $padding: clamp(16px, 3vw, 30px);
   transition-property: opacity;
   transition: 150ms ease-in-out;
 }
+
+.eleventy-plugin-youtube-embed {
+  margin-bottom: 1rem;
+}

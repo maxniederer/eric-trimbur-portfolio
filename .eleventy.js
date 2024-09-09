@@ -2,6 +2,7 @@ const markdownIt = require("markdown-it");
 const markdownItAnchor = require("markdown-it-anchor");
 
 const pluginTOC = require("eleventy-plugin-toc");
+const embedEverything = require("eleventy-plugin-embed-everything");
 
 module.exports = function (eleventyConfig) {
   // Markdown
@@ -24,6 +25,9 @@ module.exports = function (eleventyConfig) {
     tags: ["h2", "h3"],
     wrapper: "div",
   });
+
+  //embeds
+  eleventyConfig.addPlugin(embedEverything);
 
   // Copy `img/` to `_site/img`
   eleventyConfig.addPassthroughCopy("src/assets");
