@@ -1,5 +1,5 @@
 let currTheme = 0;
-const totalThemes = 4;
+const totalThemes = 6;
 
 if (!localStorage.getItem("theme")) localStorage.setItem("theme", "theme-0");
 currTheme = Number(localStorage.getItem("theme").slice(-1));

@@ -19,26 +19,38 @@
 }
 
 html[data-theme=theme-0] {
-  --color-body: #170345;
-  --color-bg: #c5c3ae;
+  --color-body: hsl(258, 92%, 14%);
+  --color-bg: hsl(55, 17%, 73%);
   --color-accent: red;
 }
 
 html[data-theme=theme-1] {
-  --color-body: #d6fedc;
-  --color-bg: #137a70;
+  --color-body: hsl(129, 95%, 92%);
+  --color-bg: hsl(174, 73%, 28%);
   --color-accent: red;
 }
 
 html[data-theme=theme-2] {
-  --color-body: #6f54c5;
-  --color-bg: #c1ee24;
+  --color-body: hsl(254, 49%, 49%);
+  --color-bg: hsl(73, 86%, 54%);
   --color-accent: red;
 }
 
 html[data-theme=theme-3] {
-  --color-body: #ddf7e5;
-  --color-bg: #895514;
+  --color-body: hsl(182, 51%, 85%);
+  --color-bg: hsl(33, 75%, 31%);
+  --color-accent: red;
+}
+
+html[data-theme=theme-4] {
+  --color-body: #273c00;
+  --color-bg: #d7c2ff;
+  --color-accent: red;
+}
+
+html[data-theme=theme-5] {
+  --color-body: #e8f89a;
+  --color-bg: #e81826;
   --color-accent: red;
 }
 
@@ -99,24 +111,38 @@ button,
 input,
 textarea {
   font-family: inherit;
+  font-weight: inherit;
   color: inherit;
 }
 
-header {
-  font-family: var(--font-mono);
-  margin-bottom: 16px;
-}
-header nav {
-  display: flex;
-  gap: 1rem;
+box-icon {
+  color: var(--color-body);
 }
 
-footer {
-  font-family: var(--font-mono);
+.btn-clear {
+  margin: 0;
+  padding: 0;
+  background: none;
+  border: none;
+  color: inherit;
+}
+
+.topnav {
+  margin-block: 16px;
+}
+.topnav nav {
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.bottomnav {
   display: flex;
   justify-content: space-between;
+  margin-block: 16px;
 }
-footer nav {
+.bottomnav nav {
   display: flex;
   gap: 1.5rem;
 }
@@ -129,11 +155,16 @@ footer nav {
 }
 
 .hero {
-  margin-block: 200px 150px;
+  min-height: 90svh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .hero h1 {
   font-size: clamp(2rem, 3vw + 4rem, 6.5rem);
   line-height: 1;
+  box-shadow: inset 0 -0.05em 0 0 var(--color-body);
+  margin-bottom: 6px;
 }
 .hero p {
   font-size: clamp(1rem, 3vw + 1rem, 3.5rem);
@@ -200,10 +231,9 @@ footer nav {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  padding-inline: 1rem;
   aspect-ratio: 1.3333333333;
-  padding-block: 1rem;
-  background: var(--color-bg);
+  padding-block: 22px;
+  padding-inline: 1rem;
 }
 .project-desc h2 {
   font-size: clamp(2rem, 3vw + 2.1rem, 3.75rem);
@@ -224,6 +254,9 @@ footer nav {
     font-size: clamp(1rem, 3vw - 0.5rem, 1.5rem);
   }
 }
+.project-desc h2 {
+  box-shadow: inset 0 -0.05em 0 0 var(--color-body);
+}
 @media (min-width: 600px) {
   .project-desc {
     justify-content: center;
@@ -239,14 +272,30 @@ footer nav {
 }
 
 .inline-padding {
-  padding-inline: clamp(16px, 3vw, 40px);
+  padding-inline: clamp(16px, 3vw, 30px);
 }
 
 .inline-padding-mobile {
-  padding-inline: clamp(16px, 3vw, 40px);
+  padding-inline: clamp(16px, 3vw, 30px);
 }
 @media (min-width: 600px) {
   .inline-padding-mobile {
     padding-inline: 0;
   }
+}
+
+.project-writeup {
+  max-width: 40rem;
+}
+.project-writeup h1 {
+  font-size: clamp(2rem, 3vw + 2.1rem, 3.75rem);
+  box-shadow: inset 0 -0.075em 0 0 var(--color-body);
+  margin-bottom: 1rem;
+}
+.project-writeup h2 {
+  margin-block: 2.2rem 0.5rem;
+}
+.project-writeup img {
+  width: 100%;
+  height: auto;
 }/*# sourceMappingURL=style.css.map */
