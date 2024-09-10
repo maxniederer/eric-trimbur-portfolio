@@ -14,7 +14,7 @@ collections:
   - name: "project"
     label: "Project"
     folder: "src/projects"
-    crate: true
+    create: true
     slug: "{{slug}}"
     fields:
       - { label: "Title", name: "title", widget: "string" }
