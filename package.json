@@ -3,8 +3,12 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "watch:sass": "npx sass src/assets/style:_site/assets/style --watch"
+    "watch:sass": "sass --watch src/assets/sass:_site/assets/css",
+    "build:sass": "sass src/assets/sass:_site/assets/css",
+    "watch:eleventy": "eleventy --serve",
+    "build:eleventy": "eleventy",
+    "start": "npm-run-all build:sass --parallel watch:*",
+    "build": "npm-run-all build:*"
   },
   "keywords": [],
   "author": "",
@@ -12,12 +16,13 @@
   "description": "",
   "devDependencies": {
     "@11ty/eleventy": "github:11ty/eleventy",
-    "netlify-cli": "^17.35.0"
+    "netlify-cli": "^17.35.0",
+    "npm-run-all": "^4.1.5"
   },
   "dependencies": {
     "eleventy-plugin-embed-everything": "^1.19.0",
     "eleventy-plugin-toc": "^1.1.5",
     "markdown-it-anchor": "^9.2.0",
-    "sass": "^1.77.8"
+    "sass": "^1.78.0"
   }
 }

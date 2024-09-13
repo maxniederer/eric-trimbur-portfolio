@@ -135,26 +135,23 @@ box-icon {
 // header and footer
 
 .topnav {
-  // font-family: var(--font-mono);
+  margin-block: 16px;
   nav {
     display: flex;
     gap: 1rem;
     justify-content: space-between;
     flex-wrap: wrap;
   }
-  // margin-bottom: 16px;
-  margin-block: 16px;
 }
 
 .bottomnav {
-  // font-family: var(--font-mono);
   display: flex;
   justify-content: space-between;
+  margin-block: 16px;
   nav {
     display: flex;
     gap: 1.5rem;
   }
-  margin-block: 16px;
 }
 
 .icon-button,
@@ -232,18 +229,18 @@ box-icon {
 }
 
 $aspect-square: 1;
-$aspect-comfy: 4/3;
-$aspect-slim: 4/3;
+$aspect-comfy: 1.33;
+$aspect-slim: 1.33;
 
 .project-img {
   aspect-ratio: $aspect-slim;
+  overflow: none;
   @media (min-width: 600px) {
     aspect-ratio: $aspect-square;
   }
   @media (min-width: 1000px) {
     aspect-ratio: $aspect-comfy;
   }
-  overflow: none;
   img {
     object-fit: cover;
     width: 100%;
@@ -252,27 +249,6 @@ $aspect-slim: 4/3;
 }
 
 .project-desc {
-  h2 {
-    font-size: clamp(2rem, calc(3vw + 2.1rem), 3.75rem);
-    @media (min-width: 600px) {
-      font-size: clamp(2rem, calc(3vw + 1.3rem), 3.75rem);
-    }
-
-    line-height: 1;
-  }
-  p {
-    font-size: clamp(1rem, calc(3vw + 0.5rem), 1.5rem);
-    @media (min-width: 600px) {
-      font-size: clamp(1rem, calc(3vw - 0.5rem), 1.5rem);
-    }
-
-    line-height: 1.4;
-    margin-bottom: 0;
-  }
-  a {
-    text-decoration: none;
-  }
-
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -280,11 +256,32 @@ $aspect-slim: 4/3;
   aspect-ratio: $aspect-slim;
   padding-block: 22px;
 
+  padding-inline: 1rem;
+
+  h2 {
+    font-size: clamp(2rem, calc(3vw + 2.1rem), 3.75rem);
+    line-height: 1;
+
+    @media (min-width: 600px) {
+      font-size: clamp(2rem, calc(3vw + 1.3rem), 3.75rem);
+    }
+  }
+  p {
+    font-size: clamp(1rem, calc(3vw + 0.5rem), 1.5rem);
+    line-height: 1.4;
+    margin-bottom: 0;
+
+    @media (min-width: 600px) {
+      font-size: clamp(1rem, calc(3vw - 0.5rem), 1.5rem);
+    }
+  }
+  a {
+    text-decoration: none;
+  }
+
   h2 {
     @include box-shadow-inset(-0.05em);
   }
-
-  padding-inline: 1rem;
 
   @media (min-width: 600px) {
     justify-content: center;
