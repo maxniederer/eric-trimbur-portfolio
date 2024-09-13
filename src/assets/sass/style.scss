@@ -73,9 +73,12 @@ body {
   flex-direction: column;
   min-height: 100svh;
 
-  overflow-x: hidden;
-
   // padding: clamp(10px, 3vw, 32px);
+}
+
+html,
+body {
+  overflow-x: hidden;
 }
 
 main {
