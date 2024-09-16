@@ -1,17 +1,19 @@
-<ul class="project-list" id="projects">
-  {%- for project in collections.project | sortByOrder -%}
-  <li class="project-entry hidden">
-    <div class="project-img">
-      <a href="{{project.url}}">
-        <img src="{{project.data.image}}" alt="{{project.data.imageAlt}}" />
-      </a>
-    </div>
-    <div class="project-desc">
-      <a href="{{project.url}}">
-        <h2>{{project.data.title}}</h2>
-      </a>
-      <p>{{project.data.desc}}</p>
-    </div>
-  </li>
-  {%- endfor -%}
-</ul>
+<section id="projects">
+  <ul class="project-list">
+    {%- for project in collections.project | sortByOrder -%}
+    <li class="project-entry">
+      <div class="project-img hidden">
+        <a href="{{project.url}}">
+          <img src="{{project.data.image}}" alt="{{project.data.imageAlt}}" />
+        </a>
+      </div>
+      <div class="project-desc hidden">
+        <a href="{{project.url}}">
+          <h2>{{project.data.title}}</h2>
+        </a>
+        <p>{{project.data.desc}}</p>
+      </div>
+    </li>
+    {%- endfor -%}
+  </ul>
+</section>
