@@ -2,12 +2,16 @@
 layout: layouts/base.njk
 ---
 
-<div class="hero inline-padding">
-  <h1>Eric Trimbur</h1>
-  {# <p>is a computer engineer in Pittsburgh, PA.</p> #}
-  <p>is a <i class="fa-solid fa-computer" aria-hidden="true"></i> computer engineer in <i class="fa-solid fa-tree-city" aria-hidden="true"></i> Pittsburgh, PA.</p>
-</div>
+<section class="max-width">
+  <div class="hero">
+    <h1>Eric Trimbur</h1>
+    <p>is a computer engineer in Pittsburgh, PA.</p>
+    <div>
+      <a href="#projects" class="btn">See my work</a>
+      <a href="#contact" class="btn btn-secondary">Get in touch</a>
+    </div>
+  </div>
+</section>
 
-{% include 'sections/projectlist.njk' %}
-
-{% include 'sections/contact.njk' %}
+{% include 'sections/about.njk' %} {% include 'sections/projectlist.njk' %} {%
+include 'sections/contact.njk' %}

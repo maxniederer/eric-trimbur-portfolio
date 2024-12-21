@@ -1,11 +1,18 @@
-<header class="topnav inline-padding">
-  <nav>
-    <button class="icon-button" title="change theme" onclick="changeTheme()">
-      <i class="fa-solid fa-rocket"></i>
-    </button>
-    <a href="/#projects">projects</a>
-    <a href="https://www.erictrimbur.com/s/Eric-Trimbur-Resume-Nov-2022.pdf">resume</a>
-    <a href="/about">about</a>
-    <a href="/#contact">contact</a>
+<header class="max-width top-nav">
+  {#
+  <button class="icon-btn" title="change theme" onclick="changeTheme()">
+    <i class="fa-solid fa-rocket"></i>
+  </button>
+  #}
+  <a href="/" class="icon-btn"><i class="fa-solid fa-rocket"></i></a>
+  <nav class="nav-menu">
+    <a class="inline-link" href="/#projects">Projects</a>
+    <a
+      class="inline-link"
+      href="https://www.erictrimbur.com/s/Eric-Trimbur-Resume-Nov-2022.pdf"
+      >Resume</a
+    >
+    {# <a class="inline-link" href="/#about">About</a> #}
+    <a class="inline-link" href="/#contact">Contact</a>
   </nav>
 </header>
