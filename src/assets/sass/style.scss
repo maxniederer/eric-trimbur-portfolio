@@ -8,11 +8,11 @@
   --font-body: "Inter", sans-serif;
   --font-heading: "Inter", sans-serif;
 
-  --color-bg: #2e2b2a;
-  --color-body: #e0d6c9;
-  --color-accent: #eba982;
-  --color-accent-2: #dec0a9;
-  --color-bg-2: #45403f;
+  --color-bg: hsl(15, 5%, 13%);
+  --color-body: hsl(34, 27%, 83%);
+  --color-accent: hsl(22, 72%, 68%);
+  --color-accent-2: hsl(26, 48%, 74%);
+  --color-bg-2: hsl(10, 5%, 20%);
 
   --color-body-alpha: hsl(168, 10%, 90%, 40%);
 
@@ -31,6 +31,8 @@
 
 html {
   scroll-behavior: smooth;
+  cursor: url("../img/circle.svg") 10 10, auto;
+  // cursor: none;
 }
 
 body {
@@ -72,6 +74,10 @@ h1 {
   font-size: 3em;
 }
 
+a {
+  cursor: inherit;
+}
+
 .hero {
   h1 {
     font-size: 5em;
@@ -85,7 +91,7 @@ h1 {
 }
 
 h2 {
-  font-size: 1.2em;
+  font-size: 1em;
   margin-bottom: 0.75em;
 }
 
@@ -128,7 +134,7 @@ h3 {
   aspect-ratio: 1;
   height: 1.6em;
   border: none;
-  cursor: pointer;
+  // cursor: pointer;
 
   display: grid;
   place-items: center;
@@ -189,7 +195,7 @@ h3 {
   border: none;
   // background-color: var(--color-accent-2);
   color: var(--color-bg);
-  cursor: pointer;
+  // cursor: pointer;
   position: relative;
   border-radius: 100px;
   margin-block: 8px;
@@ -255,6 +261,7 @@ h3 {
 
 button {
   background: none;
+  cursor: inherit;
 }
 
 // hero
@@ -405,33 +412,36 @@ form > div {
   }
 }
 
+html:has(.writeup-holder),
+body:has(.writeup-holder) {
+  overflow: initial !important;
+}
+
 aside {
-  // border: 1px solid var(--color-body);
-  // color: var(--color-bg);
-  // background-color: var(--color-body);
-  // padding-block: 32px;
-  // padding-inline: 28px;
-  // display: none;
-  top: 32px;
   font-size: 1.2em;
   border-bottom: 1px solid var(--color-body);
   padding-bottom: 50px;
+
   h2 {
     font-size: 1.5em;
     margin-bottom: 4px;
   }
-  @media (min-width: 800px) {
-    // display: inherit;
 
+  @media (min-width: 800px) {
     position: sticky;
+    top: 32px;
     border-bottom: none;
   }
+}
+
+ol ::marker {
+  font-size: 0.85em;
 }
 
 .writeup-holder > div:nth-child(1) {
   display: none;
   @media (min-width: 800px) {
-    display: inherit;
+    display: block;
   }
 }
 
@@ -468,11 +478,6 @@ aside {
   @media (min-width: 800px) {
     grid-template-columns: 250px auto;
   }
-}
-
-html:has(.writeup),
-body:has(.writeup) {
-  overflow: initial !important;
 }
 
 .writeup {
