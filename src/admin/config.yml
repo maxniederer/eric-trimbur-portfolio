@@ -8,7 +8,7 @@ backend:
     uploadMedia: Upload “{{path}}”
     deleteMedia: Delete “{{path}}”
     openAuthoring: "{{message}}"
-media_folder: "_site/assets/img"
+media_folder: "/assets/img"
 public_folder: "/assets/img"
 collections:
   - name: "project"
