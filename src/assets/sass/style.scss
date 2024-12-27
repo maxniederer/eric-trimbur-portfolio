@@ -417,6 +417,18 @@ body:has(.writeup-holder) {
   overflow: initial !important;
 }
 
+.writeup-holder a:not(.btn) {
+  color: var(--color-body);
+  text-decoration: underline;
+  transition-property: color;
+  transition-duration: 150ms;
+}
+
+.writeup-holder a:not(.btn):hover {
+  color: var(--color-accent);
+  text-decoration: none;
+}
+
 aside {
   font-size: 1.2em;
   border-bottom: 1px solid var(--color-body);
@@ -434,10 +446,6 @@ aside {
   }
 }
 
-ol ::marker {
-  font-size: 0.85em;
-}
-
 .writeup-holder > div:nth-child(1) {
   display: none;
   @media (min-width: 800px) {
@@ -447,11 +455,16 @@ ol ::marker {
 
 .toc {
   ol {
-    // list-style-type: roman;
-    // padding-left: 32px;
-    // padding-right: 16px;
-    // margin-bottom: 0;
+    line-height: 1.25;
+
+    li {
+      margin-bottom: 6px;
+    }
   }
+}
+
+ol ::marker {
+  font-size: 0.85em;
 }
 
 .writeup-holder {
