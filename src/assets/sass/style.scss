@@ -71,7 +71,9 @@ h3 {
 }
 
 h1 {
+  line-height: 1.1;
   font-size: 3em;
+  margin-bottom: 10px;
 }
 
 a {
@@ -80,13 +82,38 @@ a {
 
 .hero {
   h1 {
-    font-size: 5em;
-    line-height: 1.2;
+    font-size: 4em;
+
+    line-height: 1;
     font-weight: 700;
     color: var(--color-accent-2);
+    margin-bottom: 6px;
+
+    @media (min-width: 800px) {
+      font-size: 5em;
+      line-height: 1.2;
+      margin-bottom: 0;
+    }
   }
+
   p {
-    font-size: 1.5em;
+    font-size: 1.3em;
+    margin-bottom: 16px;
+    // margin-bottom: 16px;
+
+    @media (min-width: 800px) {
+      font-size: 1.5em;
+    }
+  }
+
+  > div {
+    display: flex;
+    gap: 8px 10px;
+    margin-top: 10px;
+    flex-wrap: wrap;
+    a {
+      margin-block: 0;
+    }
   }
 }
 
@@ -264,19 +291,6 @@ button {
   cursor: inherit;
 }
 
-// hero
-
-.hero {
-  > div {
-    display: flex;
-    gap: 10px;
-    margin-top: 6px;
-  }
-  // display: flex;
-  // flex-direction: column;
-  // gap: 0.3em;
-}
-
 // nav
 
 .top-nav {
@@ -300,13 +314,16 @@ button {
   gap: 16px;
 
   p {
-    font-size: 1.35em;
     max-width: 60ch;
-    min-width: 30ch;
+    // min-width: 30ch;
+    font-size: 1.2em;
+    @media (min-width: 800px) {
+      font-size: 1.35em;
+    }
   }
 
   @media (min-width: 800px) {
-    grid-template-columns: 6fr 6fr;
+    grid-template-columns: 1fr 1fr;
   }
 }
 
