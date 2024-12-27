@@ -4,6 +4,7 @@ order: 5
 desc: This midpower rocket was designed and built as a subscale test as a part of the NASA USLI competition. It features dual deployment and telemetry logging.
 image: /assets/img/rocket0.jpg
 imageAlt: A pink rocket with black accents
+dated: 2021
 ---
 
 ## Overview

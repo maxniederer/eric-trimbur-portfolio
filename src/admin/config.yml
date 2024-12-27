@@ -28,3 +28,4 @@ collections:
         }
       - { label: "Tags", name: "tags", widget: "hidden", default: ["project"] }
       - { label: "Body", name: "body", widget: "markdown" }
+      - { label: "Year Posted", name: "dated", widget: "number" }
