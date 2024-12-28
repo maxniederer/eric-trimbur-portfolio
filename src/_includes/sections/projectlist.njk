@@ -1,24 +1,26 @@
 <section id="projects" class="max-width">
-  <h2>Projects</h2>
-  <ol class="project-list">
-    {%- for project in collections.project | sortByOrder -%}
-    <li class="project-entry">
-      <h3>
-        <a href="{{project.url}}" class="inline-link reverse"
-          >{{project.data.title}}</a
-        >
-      </h3>
-      <p>{{project.data.desc}}</p>
-      <img src="{{project.data.image}}" alt="{{project.data.imageAlt}}" />
-      {#
-      <div class="project-desc hidden">
+  <div>
+    <h2>Projects</h2>
+    <ol class="project-list">
+      {%- for project in collections.project | sortByOrder -%}
+      <li class="project-entry">
         <h3>
-          <a href="{{project.url}}" class=""> {{project.data.title}} </a>
+          <a href="{{project.url}}" class="inline-link reverse"
+            >{{project.data.title}}</a
+          >
         </h3>
         <p>{{project.data.desc}}</p>
-      </div>
-      #}
-    </li>
-    {%- endfor -%}
-  </ol>
+        <img src="{{project.data.image}}" alt="{{project.data.imageAlt}}" />
+        {#
+        <div class="project-desc hidden">
+          <h3>
+            <a href="{{project.url}}" class=""> {{project.data.title}} </a>
+          </h3>
+          <p>{{project.data.desc}}</p>
+        </div>
+        #}
+      </li>
+      {%- endfor -%}
+    </ol>
+  </div>
 </section>

@@ -1,3 +1,5 @@
+const { DateTime } = require("luxon");
+
 const markdownIt = require("markdown-it");
 const markdownItAnchor = require("markdown-it-anchor");
 
@@ -22,7 +24,7 @@ module.exports = function (eleventyConfig) {
 
   //table of contents
   eleventyConfig.addPlugin(pluginTOC, {
-    tags: ["h2", "h3"],
+    tags: ["h2", "h3", "h4", "h5"],
     wrapper: "div",
   });
 
@@ -39,6 +41,10 @@ module.exports = function (eleventyConfig) {
     return vals.sort((a, b) => Math.sign(a.data.order - b.data.order));
   }
   eleventyConfig.addFilter("sortByOrder", sortByOrder);
+
+  eleventyConfig.addFilter("postDate", (dateObj) => {
+    return DateTime.fromJSDate(dateObj).toLocaleString(DateTime.DATE_MED);
+  });
 
   return {
     dir: {

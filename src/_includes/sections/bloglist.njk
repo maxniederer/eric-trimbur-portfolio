@@ -1,0 +1,18 @@
+<section id="blogs" class="max-width">
+  <div>
+    <h2>Blogs</h2>
+    <ol class="blog-list">
+      {%- for blog in collections.blog -%}
+      <li class="blog-entry">
+        <h3>
+          <a href="{{blog.url}}" class="inline-link reverse"
+            >{{blog.data.title}}</a
+          >
+        </h3>
+        <img src="{{blog.data.image}}" alt="{{blog.data.imageAlt}}" />
+        <p>{{blog.data.dated | postDate}}</p>
+      </li>
+      {%- endfor -%}
+    </ol>
+  </div>
+</section>
