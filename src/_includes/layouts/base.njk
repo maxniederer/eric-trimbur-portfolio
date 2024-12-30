@@ -45,13 +45,10 @@
     <link rel="stylesheet" href="/assets/vendor/lenis/lenis.css" />
     <script type="module" src="/assets/js/scroll.js" defer></script>
 
-    <script type="module" src="/assets/js/cursor.js" defer></script>
-
     {# cms #}
     <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
   </head>
   <body>
-    <div id="invertedcursor"></div>
     {% include 'partials/header.njk' %}
 
     <main>{{ content | safe }}</main>

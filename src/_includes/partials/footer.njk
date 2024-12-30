@@ -1,5 +1,5 @@
 <footer class="top-nav max-width">
-  <div>&copy; Eric Trimbur 2024-2025</div>
+  <div>&copy; Eric Trimbur <span id="year"></span></div>
   <nav class="nav-menu">
     <a href="mailto:trimbureric@gmail.com" class="icon-link"
       ><i class="fa-solid fa-envelope"></i
@@ -12,3 +12,7 @@
     ></a>
   </nav>
 </footer>
+
+<script defer>
+  document.getElementById("year").innerHTML = new Date().getFullYear()
+</script>
