@@ -31,8 +31,6 @@
 
 html {
   scroll-behavior: smooth;
-  cursor: url("../img/circle.svg") 10 10, auto;
-  // cursor: none;
 }
 
 body {
@@ -74,10 +72,6 @@ h1 {
   line-height: 1.1;
   font-size: 3em;
   margin-bottom: 10px;
-}
-
-a {
-  cursor: inherit;
 }
 
 .hero {
@@ -169,22 +163,20 @@ h3 {
 
 .writeup-holder a:not(.btn),
 .inline-link {
-  // position: relative;
-  // display: inline-block;
-
   transition-property: color, box-shadow;
   transition-duration: 150ms;
 
   box-shadow: 0px -1px var(--color-body) inset;
-
-  // color: var(--color-accent-2);
 }
 
 .writeup-holder a:not(.btn):hover,
-.inline-link:hover,
-.icon-link:hover {
+.inline-link:hover {
   color: var(--color-accent);
   box-shadow: 0px -5px var(--color-accent) inset;
+}
+
+.icon-link:hover {
+  color: var(--color-accent);
 }
 
 .icon-link {
@@ -192,23 +184,11 @@ h3 {
   transition-duration: 150ms;
 }
 
-.inline-link.reverse::after {
-  // width: 100%;
-}
-
-.inline-link.reverse:hover::after {
-  // width: 0%;
-}
-
 .btn {
   display: inline-block;
   padding: 10px 24px;
-  // --button-border-style: 1px solid var(--color-body);
-  // border: var(--button-border-style);
   border: none;
-  // background-color: var(--color-accent-2);
   color: var(--color-bg);
-  // cursor: pointer;
   position: relative;
   border-radius: 100px;
   margin-block: 8px;
@@ -242,8 +222,6 @@ h3 {
 
 .btn-secondary {
   color: var(--color-body);
-  // background-color: var(--color-bg-2);
-  // border: 1px solid var(--color-body);
 }
 
 .btn-secondary::after {
@@ -257,7 +235,6 @@ h3 {
 }
 
 .btn:hover {
-  // background-color: var(--color-accent);
   color: var(--color-bg);
   border: none;
 }
@@ -266,15 +243,9 @@ h3 {
   left: 0;
 }
 
-.btn-secondary:hover {
-  // color: var(--color-accent);
-  // border-color: var(--color-accent);
-  // background-color: var(--color-bg);
-}
-
 button {
   background: none;
-  cursor: inherit;
+  cursor: pointer;
 }
 
 // nav
