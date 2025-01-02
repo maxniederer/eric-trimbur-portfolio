@@ -2,7 +2,7 @@
 title: "Vernier Calipers: A Love and Hate Relationship "
 desc: My thoughts on vernier calipers and my quest to love them, despite being
   beaten down at every turn.
-image: /src/assets/img/caliper_blog_cover.jpg
+image: /assets/img/caliper_blog_cover.jpg
 imageAlt: Calipers
 dated: 2025-01-02T16:26:00.000Z
 tags:
@@ -26,21 +26,21 @@ I do own one single good pair of vernier calipers, but I can't seem to find a su
 
 The below image shows this specimen. Notice how the vernier scale is accurate in that in the closed position the 0 on the vernier scale and the 0 on the ruler are lined up. Furthermore, you can see that the 10 on the scale also lines up as it should always when 0 is.
 
-![Good Calipers](/src/assets/img/good_calipers.jpg)
+![Good Calipers](/assets/img/good_calipers.jpg)
 
 In the below photo we can also see how the caliper end has the metal slide perfectly lined up in the back. This is useful when measuring the depth of an item and it's alignment is key for accuracy. The slight protrusion in the photo is just because of the way I had to prop it up to take the photo, but even then the discrepancy pictured is minor for the type of work I'm doing.
 
-![Good Calipers End](/src/assets/img/good_calipers_end.jpg)
+![Good Calipers End](/assets/img/good_calipers_end.jpg)
 
 # The Bad
 
 At one point I had gone on Amazon and ordered some extra plastic vernier calipers. From the product photos they looked mostly similar to the ones I had and I had high expectations, but I would find only disappointment when I received them. Not only were they all incredibly sloppy, which would lead to very inaccurate measurements when trying to use the vernier scale, the vernier scale itself wasn't even printed correctly. Look in the photo below how the 0 doesn't line up when closed, and that the 10 is even further misaligned than the 0 is, meaning all of the other numbers in between are inaccurate too.
 
-![Bad Calipers](/src/assets/img/bad_calipers_scale.jpg)
+![Bad Calipers](/assets/img/bad_calipers_scale.jpg)
 
 Furthermore, see below how far off the metal end is from the plastic end, any depth measurements will be a full millimeter off!
 
-![Bad Calipers End](/src/assets/img/bad_calipers_end.jpg)
+![Bad Calipers End](/assets/img/bad_calipers_end.jpg)
 
 Truth be told, I do still use these calipers from time to time. I have to be mindful of their shortcomings though, and I can't rely on them for sub-millimeter precision.
 
@@ -48,7 +48,7 @@ Truth be told, I do still use these calipers from time to time. I have to be min
 
 One date night my partner and I were biding time for our dinner reservations in a Joann Fabrics. The cutest pair of mini calipers caught my eye and I just had to buy them. Now I'm told it's bad manners to inspect shop tools while on date nights so I trusted that by being sold in a reputable physical store they would at least be of acceptable quality, surely no worse than the Amazon pairs. So you could believe my horrors when the next day I looked more closely at the pair and realized that not only were they bad, the vernier scale wasn't even a vernier scale.
 
-![Ugly Calipers](/src/assets/img/ugly_calipers.jpg)
+![Ugly Calipers](/assets/img/ugly_calipers.jpg)
 
 If you aren't keen on these things, notice how there are 9 divisions on the "vernier scale" for 9 divisions on the main ruler, instead of 10 divisions within 9; every single tick mark lines up at once. This is completely useless, and yet they still write 0.05 mm as if it actually does something! Clearly whoever made this has zero idea what a vernier scale is and rather than trying to understand they just put some lines there and wrote the same numbers all the others did. Even if they did the correct divisions, there would only be 9 or 10 marks, meaning 0.1 mm accuracy. They would need to add tick marks in between to get the 0.05 mm accuracy it claims.
 
