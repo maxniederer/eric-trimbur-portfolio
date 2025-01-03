@@ -3,14 +3,17 @@
     <h2 class="hidden">Blogs</h2>
     <ol class="blog-list">
       {%- for blog in collections.blog | reverse -%}
-      <li class="blog-entry hidden">
-        <h3>
-          <a href="{{blog.url}}" class="inline-link reverse"
-            >{{blog.data.title}}</a
-          >
-        </h3>
+      <li class="entry blog-entry hidden">
+        <div>
+          <h3>
+            <a href="{{blog.url}}" class="inline-link reverse"
+              >{{blog.data.title}}</a
+            >
+          </h3>
+          <p>{{blog.data.desc}}</p>
+          <p class="blog-date">{{blog.data.date | postDate}}</p>
+        </div>
         <img src="{{blog.data.image}}" alt="{{blog.data.imageAlt}}" />
-        <p>{{blog.data.date | postDate}}</p>
       </li>
       {%- endfor -%}
     </ol>

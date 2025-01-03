@@ -3,7 +3,7 @@
     <h2 class="hidden">Projects</h2>
     <ol class="project-list">
       {%- for project in collections.project | sortByOrder -%}
-      <li class="project-entry hidden">
+      <li class="entry project-entry hidden">
         <h3>
           <a href="{{project.url}}" class="inline-link reverse"
             >{{project.data.title}}</a
