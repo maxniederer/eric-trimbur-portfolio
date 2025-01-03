@@ -593,3 +593,23 @@ ol ::marker {
     // text-align: center;
   }
 }
+
+//animate on scroll
+
+@media (prefers-reduced-motion: no-preference) {
+  .hidden {
+    transition: all 0.75s;
+  }
+}
+
+.hidden {
+  opacity: 0;
+  filter: blur(6px);
+  // transform: translateY(50px);
+}
+
+.show {
+  opacity: 1;
+  filter: blur(0);
+  // transform: translateY(0);
+}

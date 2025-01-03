@@ -1,9 +1,9 @@
 <section id="projects" class="max-width">
   <div>
-    <h2>Projects</h2>
+    <h2 class="hidden">Projects</h2>
     <ol class="project-list">
       {%- for project in collections.project | sortByOrder -%}
-      <li class="project-entry">
+      <li class="project-entry hidden">
         <h3>
           <a href="{{project.url}}" class="inline-link reverse"
             >{{project.data.title}}</a
