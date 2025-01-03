@@ -182,16 +182,18 @@ h3 {
 
 .writeup-holder a:not(.btn),
 .inline-link {
+  color: var(--color-accent-2);
+  font-weight: 500;
   transition-property: color, box-shadow;
-  transition-duration: 150ms;
+  transition-duration: 200ms;
 
-  box-shadow: 0px -1px var(--color-body) inset;
+  box-shadow: 0px 0px transparent inset;
 }
 
 .writeup-holder a:not(.btn):hover,
 .inline-link:hover {
   color: var(--color-accent);
-  box-shadow: 0px -5px var(--color-accent) inset;
+  box-shadow: 0px -0.3em var(--color-accent) inset;
 }
 
 .icon-link:hover {
