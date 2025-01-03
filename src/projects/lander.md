@@ -4,7 +4,7 @@ order: 3
 desc: Made for NASA’s USLI competition, this autonomous lander is jettisoned out of the launch vehicle during descent to land, self-level, and send back a panoramic photo.
 image: /assets/img/lander1.png
 imageAlt: A 3D mockup of the planetary lander
-dated: 2021
+year: 2021
 ---
 
 ## Overview

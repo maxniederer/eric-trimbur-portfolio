@@ -4,7 +4,7 @@ desc: My thoughts on vernier calipers and my quest to love them, despite being
   beaten down at every turn.
 image: /assets/img/caliper_blog_cover.jpg
 imageAlt: Calipers
-dated: 2025-01-02T16:26:00.000Z
+date: 2025-01-02T16:26:00.000Z
 tags:
   - blog
 ---

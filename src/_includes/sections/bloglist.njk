@@ -2,7 +2,7 @@
   <div>
     <h2 class="hidden">Blogs</h2>
     <ol class="blog-list">
-      {%- for blog in collections.blog -%}
+      {%- for blog in collections.blog | reverse -%}
       <li class="blog-entry hidden">
         <h3>
           <a href="{{blog.url}}" class="inline-link reverse"
@@ -10,7 +10,7 @@
           >
         </h3>
         <img src="{{blog.data.image}}" alt="{{blog.data.imageAlt}}" />
-        <p>{{blog.data.dated | postDate}}</p>
+        <p>{{blog.data.date | postDate}}</p>
       </li>
       {%- endfor -%}
     </ol>

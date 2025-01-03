@@ -26,7 +26,7 @@ collections:
           name: "order",
           widget: "number",
         }
-      - { label: "Year of Project", name: "dated", widget: "number" }
+      - { label: "Year of Project", name: "year", widget: "number" }
       - { label: "Tags", name: "tags", widget: "hidden", default: ["project"] }
       - { label: "Body", name: "body", widget: "markdown" }
   - name: "blog"
@@ -39,6 +39,6 @@ collections:
       - { label: "Description (under ~25 words)", name: "desc", widget: "text" }
       - { label: "Image", name: "image", widget: "image" }
       - { label: "Image Alt Text", name: "imageAlt", widget: "text" }
-      - { label: "Date", name: "dated", widget: "datetime" }
+      - { label: "Date", name: "date", widget: "datetime" }
       - { label: "Tags", name: "tags", widget: "hidden", default: ["blog"] }
       - { label: "Body", name: "body", widget: "markdown" }
