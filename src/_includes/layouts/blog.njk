@@ -1,0 +1,20 @@
+---
+layout: layouts/base.njk
+---
+
+<div class="writeup-holder max-width">
+  <div>
+    {% if content | toc %}
+    <aside>
+      <h2>Contents</h2>
+      {{ content | toc | safe }}
+    </aside>
+    {% endif %}
+  </div>
+  <div class="writeup">
+    <h1>{{title}}</h1>
+    <p>{{dated | postDate}}</p>
+    {{ content | safe }}
+    <a href="/#blogs" class="btn">Back to my blogs</a>
+  </div>
+</div>
