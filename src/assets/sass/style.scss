@@ -405,11 +405,6 @@ button {
   color: var(--color-body-alpha);
 }
 
-.blog-list {
-  // display: grid;
-  // grid-template-columns: repeat(3, minmax(0, 1fr));
-}
-
 img {
   max-width: 100%;
   object-fit: cover;
@@ -499,6 +494,11 @@ aside {
 
     li {
       margin-bottom: 6px;
+    }
+
+    ol {
+      padding-left: 20px;
+      list-style-type: lower-roman;
     }
   }
 }

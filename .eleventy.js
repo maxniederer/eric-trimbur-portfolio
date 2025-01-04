@@ -3,7 +3,8 @@ const { DateTime } = require("luxon");
 const markdownIt = require("markdown-it");
 const markdownItAnchor = require("markdown-it-anchor");
 
-const pluginTOC = require("eleventy-plugin-toc");
+// const pluginTOC = require("eleventy-plugin-toc");
+const pluginTOCN = require("eleventy-plugin-nesting-toc");
 const embedEverything = require("eleventy-plugin-embed-everything");
 
 module.exports = function (eleventyConfig) {
@@ -22,8 +23,8 @@ module.exports = function (eleventyConfig) {
     })
   );
 
-  //table of contents
-  eleventyConfig.addPlugin(pluginTOC, {
+  //table of contents, nested
+  eleventyConfig.addPlugin(pluginTOCN, {
     tags: ["h2", "h3", "h4", "h5"],
     wrapper: "div",
   });
