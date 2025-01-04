@@ -12,18 +12,9 @@ layout: layouts/base.njk
     {% endif %}
   </div>
   <div class="writeup">
-    {#
-    <div class="project-hero" style="background-image: url({{image}})">
-      #} {# <img src="{{image}}" /> #}
-      <h1>{{title}}</h1>
-      <p>{{year}}</p>
-      {#
-    </div>
-    #} {{ content | safe }} {#
-    <h3>
-      <a href="/#projects" class="inline-link reverse">Back to my portfolio.</a>
-    </h3>
-    #}
+    <h1>{{title}}</h1>
+    <p class="italics">{{year}}</p>
+    {{ content | safe }}
     <a href="/#projects" class="btn">Back to my projects</a>
   </div>
 </div>

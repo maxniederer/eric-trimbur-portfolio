@@ -45,19 +45,15 @@ body {
 
 section {
   // margin-block: 3em;
-  min-height: 100svh;
+  // min-height: 100svh;
   display: grid;
   align-items: center;
-  // margin-block: 100px;
-}
-
-section.invert {
-  color: var(--color-bg);
-  background-color: var(--color-body);
+  margin-block: 400px;
 }
 
 section:has(.hero) {
-  min-height: 70svh;
+  min-height: 60svh;
+  margin-block: 0;
 }
 
 h1,
@@ -72,6 +68,11 @@ h1 {
   line-height: 1.1;
   font-size: 3em;
   margin-bottom: 10px;
+}
+
+.italics {
+  font-style: italic;
+  color: var(--color-body-alpha);
 }
 
 .hero {
@@ -165,17 +166,11 @@ h3 {
   background: none;
   filter: invert(80%) sepia(13%) saturate(677%) hue-rotate(343deg)
     brightness(97%) contrast(84%);
-  // filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg)
-  // brightness(102%) contrast(102%);
-  // filter: invert(90%) sepia(12%) saturate(246%) hue-rotate(354deg)
-  // brightness(99%) contrast(82%);
   transition-property: filter;
   transition-duration: 150ms;
 }
 
 .logo:hover {
-  // filter: invert(80%) sepia(13%) saturate(677%) hue-rotate(343deg)
-  // brightness(97%) contrast(84%);
   filter: invert(70%) sepia(16%) saturate(1210%) hue-rotate(336deg)
     brightness(97%) contrast(88%);
 }
@@ -400,9 +395,7 @@ button {
 }
 
 .blog-date {
-  font-style: italic;
   margin-top: 8px;
-  color: var(--color-body-alpha);
 }
 
 img {
@@ -523,7 +516,8 @@ ol ::marker {
       max-width: 70ch;
     }
   }
-  img {
+  img,
+  .eleventy-plugin-youtube-embed {
     margin-block: 24px;
     max-height: 600px;
   }
@@ -567,13 +561,6 @@ ol ::marker {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-
-  img {
-    // margin: 0;
-    // max-height: none;
-    // grid-row: 1 / span 2;
-    // grid-column: 1;
-  }
 
   &::after {
     content: "";
