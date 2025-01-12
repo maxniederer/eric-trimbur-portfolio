@@ -75,11 +75,32 @@ h1 {
   color: var(--color-body-alpha);
 }
 
+@keyframes spin {
+  from {
+    transform: rotate(0turn);
+  }
+  to {
+    transform: rotate(1.5turn);
+  }
+}
+
+@keyframes rotateAnimationSmall {
+  0% {
+    transform: perspective(3000px) rotateY(-10deg) rotateZ(1deg);
+  }
+  50% {
+    transform: perspective(3000px) rotateY(10deg) rotateZ(-1deg);
+  }
+  100% {
+    transform: perspective(3000px) rotateY(-10deg) rotateZ(1deg);
+  }
+}
+
 .hero {
   display: grid;
   margin-inline: auto;
   max-width: 400px;
-  row-gap: 20px;
+  row-gap: 40px;
   column-gap: 12px;
   text-align: center;
 
@@ -101,22 +122,58 @@ h1 {
     }
   }
 
+  .hero-img-holder {
+    position: relative;
+    margin-inline: auto;
+    // transform-origin: center;
+    animation: rotateAnimationSmall 16000ms infinite ease-in-out;
+
+    &::after,
+    &::before {
+      content: "";
+      position: absolute;
+      animation-name: spin;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
+    }
+    &::after {
+      background-color: var(--color-accent-2);
+      width: 102%;
+      height: 99%;
+      top: 1vw;
+      left: 0.4vw;
+      border-radius: 47%;
+      animation-duration: 23000ms;
+    }
+    &::before {
+      background-color: var(--color-bg-2);
+      width: 107%;
+      height: 103%;
+      top: -0.5vw;
+      left: -0.9vw;
+      border-radius: 45%;
+      animation-duration: 28000ms;
+    }
+  }
+
   .hero-img {
     display: grid;
     place-items: center;
     max-width: 200px;
     aspect-ratio: 1;
     overflow: hidden;
-    border-radius: 100px;
+    border-radius: 100%;
     margin-inline: auto;
+    position: relative;
+    z-index: 2;
+
+    grid-row: 1 / span 1;
 
     @media (min-width: 800px) {
       margin-inline: none;
       max-width: 100%;
       justify-self: end;
     }
-
-    grid-row: 1 / span 1;
   }
 
   img {
