@@ -11,7 +11,7 @@ year: 2021
 
 I developed the Trimbuphone for my junior design class. The individual assignment was simply to make circuit using a 555 timer and then design and assemble it on a PCB. I personally also took on the challenge to develop a professional enclosure.
 
-[Download the full report here.](https://www.erictrimbur.com/s/555_Report.pdf)
+[Download the full report here.](https://drive.google.com/file/d/1TVH-ojmEfLI-xRp-4q72if8W3JZwNc5o/view?usp=sharing)
 
 ## A Complete Synthesizer
 
