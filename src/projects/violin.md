@@ -1,10 +1,12 @@
 ---
 title: Violin
-order: 4
-desc: This violin was built from scratch. Featuring a traditional spruce top but with cherry wood sides, back, and neck, this violin sounds as great as it looks.
+desc: This violin was built from scratch. Featuring a traditional spruce top but
+  with cherry wood sides, back, and neck, this violin sounds as great as it
+  looks.
 image: /assets/public/violin0.jpg
 imageAlt: A homemade violin made of cherry wood and spruce.
-year: 2021
+order: 4
+year: 2020
 ---
 
 ## Overview
