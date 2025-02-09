@@ -4,7 +4,7 @@ desc: An autonomous robot capable of solving the Rubik’s Cube in under 5 secon
 image: /assets/public/rubiks1.jpg
 imageAlt: A Rubik's Cube suspended in the finished Rubiks Cube Solver machine
 order: 1
-year: 2021
+year: 2022
 ---
 
 ## Overview
