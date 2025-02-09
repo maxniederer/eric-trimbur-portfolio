@@ -1,9 +1,9 @@
 ---
 title: Rubik’s Cube Solver
-order: 1
 desc: An autonomous robot capable of solving the Rubik’s Cube in under 5 seconds.
 image: /assets/public/rubiks1.jpg
 imageAlt: A Rubik's Cube suspended in the finished Rubiks Cube Solver machine
+order: 1
 year: 2021
 ---
 
@@ -16,7 +16,7 @@ I collaborated with three engineers to design and build a robot able to autonomo
 - manufacturing
 - motor control
 
-[Download the full report here.](https://www.erictrimbur.com/s/Final-Design-Document.pdf)
+[Download the full report here.](https://drive.google.com/file/d/1pWZnpyIZrBACUWUGrRaTvNuxY9Acdps6/view?usp=sharing)
 
 https://www.youtube.com/watch?v=A4SFoooSrAI
 
