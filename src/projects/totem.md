@@ -1,9 +1,10 @@
 ---
 title: Totem Twist
-order: 6
-desc: A take on the classic Bop-It toy, Totem Twist has the user quickly perform one of three randomized tasks at an ever increasing pace.
+desc: A take on the classic Bop-It toy, Totem Twist has the user quickly perform
+  one of three randomized tasks at an ever increasing pace.
 image: /assets/public/totem1.jpg
 imageAlt: A cylindrical machine with a countdown interface
+order: 6
 year: 2021
 ---
 
@@ -11,7 +12,7 @@ year: 2021
 
 The Totem Twist was the final project in my junior design class. The task was to create a toy similar to the classic Bop-It toy. I worked on a team of three on this project, contributing primarily to overall system design, firmware, and mechanical design.
 
-[Download the full report here.](https://www.erictrimbur.com/s/totemTwistReport-compressed.pdf)
+[Download the full report here.](https://drive.google.com/file/d/1ykwwrMhN95HZa_helLwPvS_tkklQdsKx/view?usp=sharing)
 
 ## System Design
 
