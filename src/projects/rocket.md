@@ -1,9 +1,11 @@
 ---
 title: Midpower Rocket
-order: 5
-desc: This midpower rocket was designed and built as a subscale test as a part of the NASA USLI competition. It features dual deployment and telemetry logging.
+desc: This midpower rocket was designed and built as a subscale test as a part
+  of the NASA USLI competition. It features dual deployment and telemetry
+  logging.
 image: /assets/public/rocket0.jpg
 imageAlt: A pink rocket with black accents
+order: 5
 year: 2021
 ---
 
@@ -11,7 +13,7 @@ year: 2021
 
 For the 2021-2022 NASA USLI competition year I was the chief engineer. As the team approached the CDR deadline, several scrubbed launches meant there were no more club launches to launch our highpower subscale required for the competition. As a hail mary attempt, I assembled a smaller midpower subscale that still tried to maintain as many similarities to the fullscale launch vehicle as possible. The vehicle was successfully launched to keep the team in the competition.
 
-[See the relevant section I wrote for our CDR report here.](https://www.erictrimbur.com/s/subscaleFlightAnalysis.pdf)
+[See the relevant section I wrote for our CDR report here.](https://drive.google.com/file/d/1g9ZbPkSa28cgMSXR3CtD8K_N6rYBPwjs/view?usp=sharing)
 
 ## Simulation
 
