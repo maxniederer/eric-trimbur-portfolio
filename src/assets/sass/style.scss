@@ -56,20 +56,27 @@
   --font-body: "Inter", sans-serif;
   --font-heading: "Inter", sans-serif;
 
-  --color-bg: hsl(15, 5%, 13%);
-  --color-body: hsl(34, 27%, 83%);
-  --color-accent: hwb(22 45% 9%);
-  --color-accent-2: hsl(26, 48%, 74%);
-  --color-bg-2: hsl(10, 5%, 20%);
+  --color-body: hsl(15, 5%, 13%);
+  --color-bg: hsl(34, 27%, 83%);
+  --color-accent: hsl(20, 48%, 41%);
+  --color-accent-2: hsl(20, 25%, 50%);
+  --color-bg-2: hsl(34, 27%, 73%);
 
-  --color-body-alpha: hsl(168, 10%, 90%, 40%);
-
-  // --color-bg: hsl(195, 22%, 93%);
-  // --color-body: hsl(229, 12%, 15%);
-  // --color-accent: hsl(352, 74%, 52%);
-  // --color-body-alpha: hsla(229, 12%, 15%, 0.376);
+  --color-body-alpha: hsla(15, 5%, 13%, 0.51);
 
   scrollbar-color: var(--color-body) var(--color-bg);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-bg: hsl(15, 5%, 13%);
+    --color-body: hsl(34, 27%, 83%);
+    --color-accent: hwb(22 45% 9%);
+    --color-accent-2: hsl(26, 48%, 74%);
+    --color-bg-2: hsl(10, 5%, 20%);
+
+    --color-body-alpha: hsl(168, 10%, 90%, 40%);
+  }
 }
 
 ::selection {
@@ -92,15 +99,13 @@ body {
 }
 
 section {
-  // margin-block: 3em;
-  // min-height: 100svh;
   display: grid;
   align-items: center;
   margin-block: 400px;
 }
 
 section:has(.hero) {
-  min-height: 60svh;
+  min-height: 72svh;
   margin-block: 0;
 }
 
@@ -186,8 +191,8 @@ h1 {
       background-color: var(--color-accent-2);
       width: 102%;
       height: 99%;
-      top: 1vw;
-      left: 0.4vw;
+      top: 1.8vw;
+      left: -0.7vw;
       border-radius: 47%;
       animation-duration: 23000ms;
     }
@@ -195,10 +200,11 @@ h1 {
       background-color: var(--color-bg-2);
       width: 107%;
       height: 103%;
-      top: -0.5vw;
-      left: -0.9vw;
+      top: -0.8vw;
+      left: -1.9vw;
       border-radius: 45%;
       animation-duration: 28000ms;
+      filter: blur(36px);
     }
   }
 
@@ -237,6 +243,12 @@ h1 {
     margin-bottom: 6px;
 
     @media (min-width: 800px) {
+      font-size: 4em;
+      line-height: 1.2;
+      margin-bottom: 0;
+    }
+
+    @media (min-width: 1000px) {
       font-size: 5em;
       line-height: 1.2;
       margin-bottom: 0;
@@ -250,6 +262,10 @@ h1 {
     line-height: 1.4;
 
     @media (min-width: 800px) {
+      font-size: 1.3em;
+    }
+
+    @media (min-width: 1000px) {
       font-size: 1.5em;
     }
   }
@@ -323,15 +339,27 @@ h3 {
 
 .logo {
   background: none;
-  filter: invert(80%) sepia(13%) saturate(677%) hue-rotate(343deg)
-    brightness(97%) contrast(84%);
+  filter: invert(51%) sepia(43%) saturate(347%) hue-rotate(335deg)
+    brightness(87%) contrast(86%);
   transition-property: filter;
   transition-duration: 150ms;
+  &:hover,
+  &:focus {
+    filter: invert(36%) sepia(41%) saturate(673%) hue-rotate(336deg)
+      brightness(98%) contrast(93%);
+  }
 }
 
-.logo:hover {
-  filter: invert(70%) sepia(16%) saturate(1210%) hue-rotate(336deg)
-    brightness(97%) contrast(88%);
+@media (prefers-color-scheme: dark) {
+  .logo {
+    filter: invert(80%) sepia(13%) saturate(677%) hue-rotate(343deg)
+      brightness(97%) contrast(84%);
+    &:hover,
+    &:focus {
+      filter: invert(70%) sepia(16%) saturate(1210%) hue-rotate(336deg)
+        brightness(97%) contrast(88%);
+    }
+  }
 }
 
 .writeup-holder a:not(.btn),
@@ -341,16 +369,20 @@ h3 {
   transition-property: color, box-shadow;
   transition-duration: 200ms;
 
-  box-shadow: 0px 0px transparent inset;
+  box-shadow: 0px 0px var(--color-accent-2) inset;
 }
 
-.writeup-holder a:not(.btn):hover,
-.inline-link:hover {
-  color: var(--color-accent);
-  box-shadow: 0px -0.3em var(--color-accent) inset;
+.writeup-holder a:not(.btn),
+.inline-link {
+  &:hover,
+  &:focus {
+    color: var(--color-accent);
+    box-shadow: 0px -0.3em var(--color-accent) inset;
+  }
 }
 
-.icon-link:hover {
+.icon-link:hover,
+.icon-link:focus {
   color: var(--color-accent);
 }
 
@@ -377,49 +409,48 @@ h3 {
 
   overflow: hidden;
   position: relative;
-}
 
-.btn::after {
-  content: "";
-  width: 100%;
-  height: 200%;
-  position: absolute;
-  top: 0%;
-  left: 0%;
-  background-color: var(--color-accent);
-  background: linear-gradient(
-    0deg,
-    var(--color-accent) 50%,
-    var(--color-accent-2) 50%
-  );
+  &::after {
+    content: "";
+    width: 100%;
+    height: 200%;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    background-color: var(--color-accent);
+    background: linear-gradient(
+      0deg,
+      var(--color-accent) 50%,
+      var(--color-accent-2) 50%
+    );
 
-  z-index: -1;
+    z-index: -1;
 
-  transition-property: left, top;
-  transition-duration: 300ms;
+    transition-property: left, top;
+    transition-duration: 300ms;
+  }
+
+  &:hover,
+  &:focus {
+    color: var(--color-bg);
+    border: none;
+    &::after {
+      top: -100%;
+    }
+  }
 }
 
 .btn-secondary {
   color: var(--color-body);
-}
-
-.btn-secondary::after {
-  color: var(--color-body);
-  background-color: var(--color-accent);
-  background: linear-gradient(
-    0deg,
-    var(--color-accent) 50%,
-    var(--color-bg-2) 50%
-  );
-}
-
-.btn:hover {
-  color: var(--color-bg);
-  border: none;
-}
-
-.btn:hover::after {
-  top: -100%;
+  &::after {
+    color: var(--color-body);
+    background-color: var(--color-accent);
+    background: linear-gradient(
+      0deg,
+      var(--color-accent) 50%,
+      var(--color-bg-2) 50%
+    );
+  }
 }
 
 button {
@@ -455,8 +486,11 @@ button {
   p {
     max-width: 60ch;
     // min-width: 30ch;
-    font-size: 1.2em;
+    font-size: 1.1em;
     @media (min-width: 800px) {
+      font-size: 1.2em;
+    }
+    @media (min-width: 1000px) {
       font-size: 1.35em;
     }
   }
@@ -738,17 +772,11 @@ ol ::marker {
 
   h1 {
     z-index: 2;
-    // grid-row: 1 / span 1;
-    // grid-column: 1;
     align-self: end;
-    // position: relative;
-    // bottom: 0;
-    // left: 50px;
     margin-left: 14px;
     margin-bottom: 30px;
     font-size: 4em;
     line-height: 1.1;
-    // text-align: center;
   }
 }
 
@@ -764,11 +792,9 @@ ol ::marker {
 .hidden {
   opacity: 0;
   filter: blur(6px);
-  // transform: translateY(50px);
 }
 
 .show {
   opacity: 1;
   filter: blur(0);
-  // transform: translateY(0);
 }
