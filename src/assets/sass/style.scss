@@ -57,10 +57,10 @@
   --font-heading: "Inter", sans-serif;
 
   --color-body: hsl(15, 5%, 13%);
-  --color-bg: hsl(34, 27%, 83%);
+  --color-bg: hsl(0, 17%, 98%);
   --color-accent: hsl(20, 48%, 41%);
   --color-accent-2: hsl(20, 25%, 50%);
-  --color-bg-2: hsl(34, 27%, 73%);
+  --color-bg-2: hsl(34, 17%, 81%);
 
   --color-body-alpha: hsla(15, 5%, 13%, 0.51);
 
@@ -69,8 +69,8 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --color-bg: hsl(15, 5%, 13%);
     --color-body: hsl(34, 27%, 83%);
+    --color-bg: hsl(15, 4%, 10%);
     --color-accent: hwb(22 45% 9%);
     --color-accent-2: hsl(26, 48%, 74%);
     --color-bg-2: hsl(10, 5%, 20%);
@@ -732,17 +732,11 @@ ol ::marker {
   }
 }
 
-.heading-wrapper {
-  margin-block: 38px 16px;
-  * {
-    display: inline;
-  }
-}
-
 .header-anchor {
-  display: none !important;
-  font-size: 1.5em;
-  margin-left: 6px;
+  opacity: 0;
+  h2:hover & {
+    opacity: 1;
+  }
 }
 
 .project-hero {
