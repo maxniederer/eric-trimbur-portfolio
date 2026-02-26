@@ -5,25 +5,25 @@ const markdownItAttrs = require("markdown-it-attrs");
 const markdownItAnchor = require("markdown-it-anchor");
 const markdownItDefList = require("markdown-it-deflist");
 
+const { eleventyImageTransformPlugin } = require("@11ty/eleventy-img");
+
 const pluginTOCN = require("eleventy-plugin-nesting-toc");
 const embedEverything = require("eleventy-plugin-embed-everything");
 
 module.exports = function (eleventyConfig) {
-  // Markdown
-  // eleventyConfig.setLibrary(
-  //   "md",
-  //   markdownIt({ html: true })
-  //     .use(markdownItAnchor, {
-  //     permalink: markdownItAnchor.permalink.linkAfterHeader({
-  //       style: "visually-hidden",
-  //       assistiveText: (title) => `Permalink to “${title}”`,
-  //       visuallyHiddenClass: "visually-hidden",
-  //       space: false,
-  //       // placement: "after",
-  //       wrapper: ['<div class="heading-wrapper">', "</div>"],
-  //     }),
-  //   })
-  // );
+
+  eleventyConfig.addPlugin(eleventyImageTransformPlugin, {
+		formats: ["avif", "webp", "jpeg"],
+		widths: [800],
+    // failOnError: false,
+		htmlOptions: {
+			imgAttributes: {
+				loading: "lazy",
+				decoding: "async",
+			},
+			pictureAttributes: {}
+		},
+	});
 
   const markdownItOptions = {
     html: true,
@@ -42,7 +42,6 @@ module.exports = function (eleventyConfig) {
     })
     .use(markdownItDefList);
   eleventyConfig.setLibrary("md", markdownLib);
-
 
   //table of contents, nested
   eleventyConfig.addPlugin(pluginTOCN, {
