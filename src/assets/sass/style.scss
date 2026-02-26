@@ -362,8 +362,7 @@ h3 {
   }
 }
 
-.writeup-holder a:not(.btn),
-.inline-link {
+a:not(.btn) {
   color: var(--color-accent-2);
   font-weight: 500;
   transition-property: color, box-shadow;
