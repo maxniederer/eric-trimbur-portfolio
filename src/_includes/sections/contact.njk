@@ -1,28 +1,20 @@
-<section class="inline-padding max-width" id="contact">
-  <div class="about-holder hidden">
-    <div>
-      <h2>Contact Me</h2>
-      <p class="balanaced">
-        Feel free to contact me with any offers or inquires. Remember to view my
-        <a href="/assets/public/resume.pdf">resume</a>.
-      </p>
-    </div>
-
-    <form name="contact" netlify>
-      <div>
-        <div>
-          <label><input type="text" name="name" placeholder="Name" /></label>
-          <label><input type="email" name="email" placeholder="Email" /></label>
-        </div>
-        <label>
-          <textarea
-            type="message"
-            name="message"
-            placeholder="Message..."
-          ></textarea>
-        </label>
-      </div>
-      <button type="submit" class="btn">Send</button>
-    </form>
-  </div>
-</section>
+<form name="contact" netlify>
+  <form-grid>
+    <label>
+      <input-name>Name</input-name>
+      <input type="text" name="name" />
+    </label>
+    <label>
+      <input-name>Email</input-name>
+      <input type="email" name="email" />
+    </label>
+    <label>
+      <input-name>Message</input-name>
+      <textarea
+        type="message"
+        name="message"
+      ></textarea>
+    </label>
+  </form-grid>
+  <button type="submit" class="btn">Send</button>
+</form>

@@ -1,24 +1,17 @@
-<section id="blogs" class="max-width">
-  <div>
-    <h2 class="hidden">Blogs</h2>
-    <ol class="blog-list">
-      {%- for blog in collections.blog | reverse -%}
-      <li class="entry blog-entry hidden">
-        <div>
-          <h3>
-            <a href="{{blog.url}}" class="inline-link">{{blog.data.title}}</a>
-          </h3>
-          <p>{{blog.data.desc}}</p>
-          <p class="blog-date italics">{{blog.data.date | postDate}}</p>
-        </div>
-        <img
-          src="{{blog.data.image}}"
-          alt="{{blog.data.imageAlt}}"
-          height="100"
-          width="100"
-        />
-      </li>
-      {%- endfor -%}
-    </ol>
-  </div>
-</section>
+{% set type = "blog" %}
+<ol class="unstyled">
+  {%- for entry in collections[type] | reverse -%}
+  <li class="entry blog">
+    <a href="{{entry.url}}" class="title">{{entry.data.title}}</a>
+    <p class="desc">{{entry.data.desc}}</p>
+    
+    {% if entry.data.year %}
+    {% set date = entry.data.year %}
+    {% else %}
+    {% set date = entry.data.date | postDate %}
+    {% endif %}
+
+    <p class="sub">{{date}}</p>
+  </li>
+  {%- endfor -%}
+</ol>

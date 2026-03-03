@@ -17,24 +17,17 @@
       media="(prefers-color-scheme: dark)"
     />
 
-    <title>Eric Trimbur {% if title %} | {{ title }} {% endif %}</title>
-
-    <!-- lenis -->
-    <script type="module" src="/assets/vendor/lenis/lenis.js" defer></script>
-    <link rel="stylesheet" href="/assets/vendor/lenis/lenis.css" />
-    <script type="module" src="/assets/js/scroll.js" defer></script>
-
-    <script type="module" src="/assets/js/scrollfade.js" defer></script>
+    <title>{% if title %}{{ title }} | {% endif %}Eric Trimbur</title>
 
     {# cms #}
     <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
   </head>
   <body>
     {% include 'partials/header.njk' %}
+    <main class="max-width">{{ content | safe }}</main>
+    {% include 'partials/footer.njk' %}
 
-    <main>{{ content | safe }}</main>
-
-    {% include 'partials/footer.njk' %} {# cms #}
+    {# cms #}
     <script>
       if (window.netlifyIdentity) {
         window.netlifyIdentity.on("init", (user) => {

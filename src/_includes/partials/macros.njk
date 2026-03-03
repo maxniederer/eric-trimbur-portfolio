@@ -1,0 +1,17 @@
+{% macro entry_list(type) %}
+<ol class="unstyled">
+  {%- for entry in collections[type] | reverse -%}
+  <li class="entry">
+    <a href="{{entry.url}}">{{entry.data.title}}</a>
+    <p>{{entry.data.desc}}</p>
+    <p class="italics">{{entry.data.date | postDate}}</p>
+    <img
+      src="{{entry.data.image}}"
+      alt="{{entry.data.imageAlt}}"
+      height="100"
+      width="100"
+    />
+  </li>
+  {%- endfor -%}
+</ol>
+{% endmacro %}

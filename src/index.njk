@@ -1,46 +1,41 @@
 ---
 layout: layouts/base.njk
+heroLine: "Hi, my name is"
+heroHeading: "Eric Trimbur"
+heroBio: "I'm a <b>computer engineer</b> working with <b>embedded systems</b> in Pittsburgh, PA. I have personal interest in electronics, aerospace, woodworking, jewelry, and more."
 ---
 
-<section class="max-width">
-  <div class="hero">
-    <div class="hero-blurb">
-      <h1>Eric Trimbur</h1>
-      <p>is a computer engineer in Pittsburgh, PA.</p>
-      <div class="hero-btns">
-        <a href="#projects" class="btn">See my work</a>
-        <a href="#contact" class="btn btn-secondary">Get in touch</a>
-      </div>
-    </div>
-    <div class="hero-img-holder hidden">
-      <div class="hero-img">
-        <img
-          src="/assets/public/pxl_20231227_171744541~2.webp"
-          alt="eric trmibur"
-          width="385"
-          height="385"/>
-      </div>
-    </div>
-  </div>
+<section id="hero" style="margin-block: 100px;">
+  <hero-card id="profile">
+    <img
+      src="/assets/public/pxl_20231227_171744541~2.webp"
+      alt="eric trimbur"
+      width="385"
+      height="385"
+      style="aspect-ratio: 1;"
+    />
+    <hero-name>
+      <p class="alt accent">{{ heroLine | safe }}</p>
+      <h1>{{ heroHeading | safe }}</h1>
+      <p class="bio">{{ heroBio | safe }}</p>
+      <a href="#projects" class="btn">See my work</a>
+      <a href="#contact" class="btn btn-secondary">Get in touch</a>
+    </hero-name>
+  </hero-card>
 </section>
 
-<section class="inline-padding max-width" id="about">
-  <div class="about-holder hidden">
-    <h2>About Me</h2>
-    <p>
-      I am a spring 2022 computer engineering graduate from the University of
-      Pittsburgh. I am a driven and independent worker with personal interests
-      in electronics, aerospace, woodworking, jewelry, and more. I’ve worked on
-      a variety of projects you can view on this website. I am currently
-      searching for electrical engineering and embedded software positions in
-      the Pittsburgh area. Please feel free to view my
-      <a href="/assets/public/resume.pdf">resume</a> and
-      <a href="#contact">contact me</a>.
-    </p>
-  </div>
+<section id="projects">
+  <h2 class="alt">Projects</h2>
+  {% include 'sections/projectlist.njk' %}
 </section>
 
+<section id="blogs" class="smaller">
+  <h2 class="alt">Blogs</h2>
+  {% include 'sections/bloglist.njk' %}
+</section>
 
-{% include 'sections/projectlist.njk' %}
-{% include 'sections/bloglist.njk' %}
-{% include 'sections/contact.njk' %}
+<section id="contact" class="smaller">
+  <h2 class="alt">Contact</h2>
+  {% include 'sections/contact.njk' %}
+</section>
+

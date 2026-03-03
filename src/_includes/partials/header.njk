@@ -1,24 +1,14 @@
 <header class="max-width top-nav">
-  {#
-  <button class="icon-btn" title="change theme" onclick="changeTheme()">
-    <i class="fa-solid fa-rocket"></i>
-  </button>
-  #} {# <a href="/" class="icon-btn"><i class="fa-solid fa-rocket"></i></a> #}
-  <a href="/" class="icon-btn logo">
-    <img
-      src="/assets/public/et-logo.svg" 
-      alt="logo"
-      height="50"
-      width="50"
-    />
+  <a href="/" class="unstyled">
+    <my-logo
+      class="logo"
+      aria-label="eric trimbur"
+    ></my-logo>
   </a>
   <nav class="nav-menu">
     <a class="inline-link no-underline" href="/#projects">Projects</a>
     <a class="inline-link no-underline" href="/#blogs">Blogs</a>
-    <a class="inline-link no-underline" href="/assets/public/resume.pdf"
-      >Resume</a
-    >
-    {# <a class="inline-link no-underline" href="/#about">About</a> #}
+    <a class="inline-link no-underline" href="/assets/public/resume.pdf">Resume</a>
     <a class="inline-link no-underline" href="/#contact">Contact</a>
   </nav>
 </header>

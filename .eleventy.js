@@ -5,10 +5,14 @@ const markdownItAttrs = require("markdown-it-attrs");
 const markdownItAnchor = require("markdown-it-anchor");
 const markdownItDefList = require("markdown-it-deflist");
 
+const timeToRead = require('eleventy-plugin-time-to-read');
+const htmlmin = require("html-minifier-terser");
+
 const { eleventyImageTransformPlugin } = require("@11ty/eleventy-img");
 
 const pluginTOCN = require("eleventy-plugin-nesting-toc");
 const embedEverything = require("eleventy-plugin-embed-everything");
+const { seconds } = require("eleventy-plugin-time-to-read/components/options-default");
 
 module.exports = function (eleventyConfig) {
 
@@ -21,7 +25,8 @@ module.exports = function (eleventyConfig) {
 				loading: "lazy",
 				decoding: "async",
 			},
-			pictureAttributes: {}
+			pictureAttributes: {},
+      fallback: "largest"
 		},
 	});
 
@@ -46,7 +51,25 @@ module.exports = function (eleventyConfig) {
   //table of contents, nested
   eleventyConfig.addPlugin(pluginTOCN, {
     tags: ["h2", "h3", "h4", "h5", "h6"],
-    wrapper: "div",
+    ignoredElements: ["a"],
+    wrapper: "nav",
+  });
+
+  eleventyConfig.addPlugin(timeToRead, {
+    style: 'short',
+  });
+  eleventyConfig.addTransform("htmlmin", function (content) {
+    if ((this.page.outputPath || "").endsWith(".html")) {
+      let minified = htmlmin.minify(content, {
+        useShortDoctype: true,
+        removeComments: true,
+        collapseWhitespace: true,
+        minifyCSS: true,
+        minifyJS: true,
+      });
+      return minified;
+    }
+    return content;
   });
 
   //embeds

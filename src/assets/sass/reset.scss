@@ -22,7 +22,7 @@ body {
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
 ul,
 ol {
-  // list-style: none;
+  list-style: none;
 }
 
 /* Set core body defaults */
@@ -74,14 +74,25 @@ textarea,
 select {
   font-family: inherit;
   font-size: inherit;
+  border: none;
+  color: inherit;
+  background: none;
+}
+
+button {
+  cursor: pointer;
 }
 
 /* Make sure textareas without a rows attribute are not tiny */
 textarea:not([rows]) {
-  min-height: 10em;
+  min-height: 7em;
+}
+
+textarea {
+  resize: vertical;
 }
 
 /* Anything that has been anchored to should have extra scroll margin */
 :target {
-  scroll-margin-block: 70px;
+  scroll-margin-block: 3ex;
 }

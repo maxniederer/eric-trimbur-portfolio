@@ -1,18 +1,36 @@
 <footer class="top-nav max-width">
-  <div>&copy; Eric Trimbur <span id="year"></span></div>
+  <p>&copy; Eric Trimbur <span id="year">2026</span></p>
+  <script defer>
+    document.getElementById("year").innerHTML = new Date().getFullYear()
+  </script>
   <nav class="nav-menu">
-    <a href="mailto:trimbureric@gmail.com" class="icon-link"
-      ><i class="fa-solid fa-envelope"></i
-    ></a>
-    <a href="https://www.linkedin.com/in/erictrimbur" class="icon-link"
-      ><i class="fa-brands fa-linkedin"></i
-    ></a>
-    <a href="https://github.com/vVPittVv" class="icon-link"
-      ><i class="fa-brands fa-github"></i
-    ></a>
+    <a
+      href="mailto:trimbureric@gmail.com"
+      class="unstyled"
+    >
+      <my-logo
+        class="email"
+        aria-label="email"
+      ></my-logo>
+    </a>
+    <a
+      href="https://www.linkedin.com/in/erictrimbur"
+      class="unstyled"
+    >
+      <my-logo
+        class="linkedin"
+        aria-label="linkedin"
+      ></my-logo>
+    </a>
+    {# <a
+      href="https://github.com/vVPittVv"
+      class="unstyled"
+    >
+      <my-logo
+        class="github"
+        aria-label="github"
+      ></my-logo>
+    </a> #}
   </nav>
 </footer>
 
-<script defer>
-  document.getElementById("year").innerHTML = new Date().getFullYear()
-</script>
