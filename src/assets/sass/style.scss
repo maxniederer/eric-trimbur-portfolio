@@ -261,6 +261,9 @@ hero-card {
     }
     @media (width < 800px) {
       text-align: center;
+      h1 {
+        font-size: 2.75em;
+      }
     }
   }
 
@@ -273,6 +276,7 @@ hero-card {
     }
     @media (width < 800px) {
       max-width: 300px;
+      margin-inline: 30px;
     }
 
     &::after, &::before {
@@ -362,8 +366,6 @@ section h2 {
 write-up {
   display: block;
   margin-block: 50px 100px;
-  max-width: 70ch;
-  margin-inline: auto;
 
   h1, h2, h3, h4, h5, h6 {
     margin-top: 2.5em;
